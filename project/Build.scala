@@ -9,10 +9,12 @@ object ApplicationBuild extends Build {
 
     val appDependencies = Seq(
       // Add your project dependencies here,
+      "uk.co.panaxiom" %% "play-dubsub" % "0.1-SNAPSHOT"
     )
 
     val main = play.Project(appName, appVersion, appDependencies).settings(
-      // Add your own project settings here      
+      // Add your own project settings here
+      resolvers += Resolver.url("Alex's GitHub Repository", url("http://alexanderjarvis.github.com/snapshots/"))(Resolver.ivyStylePatterns)
     )
 
 }
