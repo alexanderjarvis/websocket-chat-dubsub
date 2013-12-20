@@ -14,12 +14,12 @@ To run this example (requires [Play](http://www.playframework.com/)):
     git clone https://github.com/alexanderjarvis/websocket-chat-dubsub.git
     cd websocket-chat-dubsub/
     play stage
-    target/start -Dhttp.port=9000 -Ddubsub.akka.remote.netty.port=2551 -Dpidfile.path=/dev/null
+    play start -Dhttp.port=9000 -Ddubsub.akka.remote.netty.port=2551 -Dpidfile.path=/dev/null
 
 In another terminal window:
 
-    target/start -Dhttp.port=9001 -Dpidfile.path=/dev/null
-    target/start -Dhttp.port=9002 -Dpidfile.path=/dev/null
+    play start -Dhttp.port=9001 -Dpidfile.path=/dev/null
+    play start -Dhttp.port=9002 -Dpidfile.path=/dev/null
     ...
 
 You may now use the websocket-chat applicaiton in multiple browser windows for each of the different ports
